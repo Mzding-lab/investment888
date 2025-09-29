@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Investment Insights</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      text-align: center;
+      /* 背景图 */
+      background: url('https://pic.yupoo.com/mzding/a1c81141/efccda5a.jpg') 
+                  no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 90%;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    #counter {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #00ffae;
+    }
+
+    .highlight {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 25px;
+      color: #ffd700;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      background: #25D366;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #1ebe5b;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="container">
+    <h1>Exclusive Investment Analysis</h1>
+    <p>
+      Get real-time insights, strategies, and expert opinions to make smarter financial decisions.<br>
+      Join our private WhatsApp group and never miss an opportunity.
+    </p >
+
+    <div id="counter">Loading...</div>
+
+    <!-- 新增文字 -->
+    <div class="highlight">
+      Helped over 100,000 investors in India with their investment needs
+    </div>
+
+    <a id="joinButton" class="btn" target="_blank">Join Group to Learn More</a >
+  </div>
+
+  <script>
+    // 群组链接
+    var groupLink = "https://chat.whatsapp.com/BDAxf1THZLCApDFJeQ0lpu";
+    document.getElementById("joinButton").href = groupLink;
+
+    // 模拟人数增长
+    var peopleCount = 56;
+    var counterElement = document.getElementById("counter");
+    function updateCounter() {
+      peopleCount += Math.floor(Math.random() * 3);
+      counterElement.innerHTML = peopleCount + " people are joining right now!";
+    }
+    setInterval(updateCounter, 2000);
+    updateCounter();
+  </script>
+</body>
+</html>
